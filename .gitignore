@@ -23,6 +23,16 @@ ICDI_2026_material_extraido_v2/
 public/arquivos/ARRAIÁ DAS CIDADES/*.DNG
 public/content/arraia-das-cidades/*.dng
 
+# Root-level migration and local helper files
+file_list.csv
+final_mapping.csv
+normalized_files.csv
+normalized_transparency.csv
+fix_transparency.ps1
+normalize_assets.ps1
+iniciar_rede_local.bat
+logo.png
+
 # OS / editor files
 .DS_Store
 Thumbs.db
