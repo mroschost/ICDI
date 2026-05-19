@@ -40,9 +40,7 @@ export const PROJECTS: Project[] = [
       '/eventos_v2/fotos/foto_01_pagina_06.jpg',
       '/eventos_v2/fotos/foto_02_pagina_06.jpg'
     ],
-    transparency: [
-      '/content/candangao-de-quadrilha-junina/candang-o.docx'
-    ],
+    transparency: [],
     objectives: [
       'Valorizar as tradicoes juninas e a cultura popular do DF',
       'Incentivar a participacao comunitaria em programacao cultural gratuita',
@@ -69,8 +67,7 @@ export const PROJECTS: Project[] = [
       '/eventos_v2/fotos/foto_02_pagina_07.jpg'
     ],
     transparency: [
-      '/content/transparency/teatro-vai-a-escola/saveclip.app-459320446-17903781414033896-5790567167841414622-n.jpg',
-      '/content/teatro-vai-a-escola/teatro-vai-escola.docx'
+      '/content/transparency/teatro-vai-a-escola/saveclip.app-459320446-17903781414033896-5790567167841414622-n.jpg'
     ],
     objectives: [
       'Levar arte e cultura para o ambiente escolar',
@@ -98,8 +95,7 @@ export const PROJECTS: Project[] = [
       '/eventos_v2/fotos/foto_02_pagina_08.jpg'
     ],
     transparency: [
-      '/content/transparency/musica-teatro-e-cidadania/saveclip.app-428645559-17878332906033896-7526550558968735316-n.jpg',
-      '/content/musica-teatro-e-cidadania/m-sica-teatro-e-cidadania.docx'
+      '/content/transparency/musica-teatro-e-cidadania/saveclip.app-428645559-17878332906033896-7526550558968735316-n.jpg'
     ],
     objectives: [
       'Promover inclusao social por meio da musica, teatro e cultura',
@@ -128,8 +124,7 @@ export const PROJECTS: Project[] = [
       '/eventos_v2/fotos/foto_03_pagina_09.jpg'
     ],
     transparency: [
-      '/content/transparency/estrutural-20-de-cultura/saveclip.app-433336629-17882799939033896-1055833069955455790-n.jpg',
-      '/content/estrutural-20-de-cultura/estrutural-20-anos-de-cultura.docx'
+      '/content/transparency/estrutural-20-de-cultura/saveclip.app-433336629-17882799939033896-1055833069955455790-n.jpg'
     ],
     objectives: [
       'Celebrar a historia da cidade com programacao cultural acessivel',
@@ -157,9 +152,7 @@ export const PROJECTS: Project[] = [
       '/eventos_v2/fotos/foto_02_pagina_10.jpg',
       '/eventos_v2/fotos/foto_03_pagina_10.jpg'
     ],
-    transparency: [
-      '/content/anima-escola/anima-escola.docx'
-    ],
+    transparency: [],
     objectives: [
       'Ampliar experiencias culturais e educativas no ambiente escolar',
       'Fortalecer a presenca do ICDI em projetos de formacao',
@@ -186,9 +179,7 @@ export const PROJECTS: Project[] = [
       '/eventos_v2/fotos/foto_02_pagina_11.jpg',
       '/eventos_v2/fotos/foto_03_pagina_11.jpg'
     ],
-    transparency: [
-      '/content/varjao-21-de-cultura/documento-sem-nome.docx'
-    ],
+    transparency: [],
     objectives: [
       'Celebrar a historia do Varjao com acesso gratuito a cultura',
       'Valorizar artistas locais e regionais em programacao comunitaria',
@@ -215,8 +206,7 @@ export const PROJECTS: Project[] = [
       '/eventos_v2/fotos/foto_02_pagina_12.jpg'
     ],
     transparency: [
-      '/content/transparency/teatro-vai-a-escola-2-edicao/saveclip.app-655568301-18090463583145684-6680947092755261239-n.jpg',
-      '/content/teatro-vai-a-escola-2-edicao/teatro-vai-a-escola-2-edi-o.docx'
+      '/content/transparency/teatro-vai-a-escola-2-edicao/saveclip.app-655568301-18090463583145684-6680947092755261239-n.jpg'
     ],
     objectives: [
       'Levar o teatro ao cotidiano escolar em Samambaia',
@@ -245,8 +235,7 @@ export const PROJECTS: Project[] = [
       '/eventos_v2/fotos/foto_03_pagina_13.jpg'
     ],
     transparency: [
-      '/content/transparency/festival-da-crianca/saveclip.app-467355060-17912305977033896-4844606768554122691-n.jpg',
-      '/content/festival-da-crianca/festival-da-crian-a.docx'
+      '/content/transparency/festival-da-crianca/saveclip.app-467355060-17912305977033896-4844606768554122691-n.jpg'
     ],
     objectives: [
       'Promover acesso a cultura e ao lazer para criancas e familias',
@@ -273,8 +262,7 @@ export const PROJECTS: Project[] = [
       '/eventos_v2/fotos/foto_01_pagina_14.jpg'
     ],
     transparency: [
-      '/content/transparency/arraia-das-cidades/saveclip.app-540630059-17851076157540593-4402759964842436811-n.jpg',
-      '/content/arraia-das-cidades/arrai-das-cidades.docx'
+      '/content/transparency/arraia-das-cidades/saveclip.app-540630059-17851076157540593-4402759964842436811-n.jpg'
     ],
     objectives: [
       'Valorizar a cultura popular e as tradicoes juninas em cinco cidades do DF',
@@ -302,8 +290,7 @@ export const PROJECTS: Project[] = [
       '/eventos_v2/fotos/foto_02_pagina_15.jpg'
     ],
     transparency: [
-      '/content/transparency/feirao-do-trabalhador/whatsapp-image-2026-04-17-at-09.45.56.jpeg',
-      '/content/feirao-do-trabalhador/feir-o-do-trabalhador.docx'
+      '/content/transparency/feirao-do-trabalhador/whatsapp-image-2026-04-17-at-09.45.56.jpeg'
     ],
     objectives: [
       'Conectar trabalhadores a vagas de emprego e processos seletivos',

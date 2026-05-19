@@ -23,6 +23,7 @@ ICDI_2026_material_extraido_v2/
 public/arquivos/
 public/extracted_new/
 public/arquivos/ARRAIÁ DAS CIDADES/*.DNG
+public/content/**/*.docx
 public/content/arraia-das-cidades/*.dng
 
 # Root-level migration and local helper files
