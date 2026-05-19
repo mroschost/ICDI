@@ -20,6 +20,8 @@ ngrok_url.txt
 # Large source assets kept only locally
 PORTFÓLIO ICDI 2026.pdf
 ICDI_2026_material_extraido_v2/
+public/arquivos/
+public/extracted_new/
 public/arquivos/ARRAIÁ DAS CIDADES/*.DNG
 public/content/arraia-das-cidades/*.dng
 
