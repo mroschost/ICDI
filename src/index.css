@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  
+  --color-gov-blue-50: #eff6ff;
+  --color-gov-blue-100: #dbeafe;
+  --color-gov-blue-600: #2563eb;
+  --color-gov-blue-700: #1d4ed8;
+  --color-gov-blue-800: #1e40af;
+  --color-gov-blue-900: #1e3a8a;
+  
+  --color-gov-yellow: #facc15;
+  --color-gov-yellow-dark: #eab308;
+}
+
+@layer base {
+  html, body {
+    @apply bg-white text-slate-900 antialiased;
+  }
+
+  .serif {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  .gov-card {
+    @apply bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all rounded-xl;
+  }
+  
+  .gov-section-stripe {
+    @apply h-1.5 w-full bg-gov-yellow;
+  }
+}
