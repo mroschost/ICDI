@@ -46,6 +46,9 @@ normalize_assets.ps1
 iniciar_rede_local.bat
 logo.png
 
+# Backup and operational directories
+BACKUP SITE/
+
 # OS / editor files
 .DS_Store
 Thumbs.db
