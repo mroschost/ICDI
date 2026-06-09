@@ -1,0 +1,73 @@
+{
+  "entities": {
+    "Project": {
+      "title": "Projeto",
+      "description": "Um projeto realizado pelo ICDI",
+      "type": "object",
+      "properties": {
+        "slug": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "fullDescription": { "type": "string" },
+        "image": { "type": "string" },
+        "objectives": { "type": "array", "items": { "type": "string" } },
+        "results": { "type": "array", "items": { "type": "string" } },
+        "color": { "type": "string" },
+        "iconName": { "type": "string" },
+        "gallery": { "type": "array", "items": { "type": "string" } },
+        "transparency": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["slug", "title", "description"]
+    },
+    "WhatsAppConfig": {
+      "title": "Configuração do WhatsApp",
+      "description": "Configurações do widget de chat do WhatsApp",
+      "type": "object",
+      "properties": {
+        "photoUrl": { "type": "string" },
+        "chatName": { "type": "string" },
+        "welcomeMessage": { "type": "string" },
+        "ctaText": { "type": "string" },
+        "phoneNumber": { "type": "string" },
+        "questions": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "Lead": {
+      "title": "Lead Capturado",
+      "description": "Informações capturadas via chat do WhatsApp",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "answers": { 
+          "type": "array", 
+          "items": { 
+            "type": "object",
+            "properties": {
+              "question": { "type": "string" },
+              "answer": { "type": "string" }
+            }
+          }
+        },
+        "completed": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "firestore": {
+    "projects": {
+      "schema": "Project",
+      "description": "Coleção de projetos"
+    },
+    "settings": {
+      "schema": "WhatsAppConfig",
+      "description": "Configurações globais do site"
+    },
+    "leads": {
+      "schema": "Lead",
+      "description": "Contatos capturados pelo widget"
+    }
+  }
+}
