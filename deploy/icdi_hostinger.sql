@@ -147,12 +147,12 @@ VALUES
   (
     'anima-escola',
     'Anima Escola',
-    'Projeto educacional e cultural realizado no CEF 15 de Taguatinga, com atividades criativas e aÃ§Ãµes voltadas ao desenvolvimento estudantil.',
-    'Projeto educacional e cultural realizado no CEF 15 de Taguatinga, com atividades criativas e aÃ§Ãµes voltadas ao desenvolvimento estudantil. A iniciativa incentivou expressÃ£o artÃ­stica, integraï¿½ï¿½o social e experiÃªncias educativas complementares.',
+    'Projeto educacional e cultural realizado no CEF 15 de Taguatinga, com atividades criativas e ações voltadas ao desenvolvimento estudantil.',
+    'Projeto educacional e cultural realizado no CEF 15 de Taguatinga, com atividades criativas e ações voltadas ao desenvolvimento estudantil. A iniciativa incentivou expressão artística, integração social e experiências educativas complementares.',
     '/eventos_v2/fotos/foto_01_pagina_10.jpg',
     '["/eventos_v2/fotos/foto_01_pagina_10.jpg","/eventos_v2/fotos/foto_02_pagina_10.jpg","/eventos_v2/fotos/foto_03_pagina_10.jpg"]',
     '[]',
-    '["Incentivar criatividade estudantil","Promover atividades culturais na escola","Estimular integraï¿½ï¿½o entre alunos","Complementar a formaï¿½ï¿½o educacional"]',
+    '["Incentivar criatividade estudantil","Promover atividades culturais na escola","Estimular integração entre alunos","Complementar a formaï¿½ï¿½o educacional"]',
     '["Participao ativa dos estudantes","Ambiente escolar mais dinmico","Desenvolvimento criativo e social"]',
     'BookOpen',
     'bg-violet-500',
@@ -281,6 +281,7 @@ ON DUPLICATE KEY UPDATE
   role = VALUES(role),
   is_active = VALUES(is_active),
   updated_at = CURRENT_TIMESTAMP;
+
 
 
 
