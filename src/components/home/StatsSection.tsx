@@ -7,10 +7,10 @@ export const StatsSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {[
-            { n: '25', t: 'Escolas Publicas' },
+            { n: '25', t: 'Escolas Públicas' },
             { n: '90', t: 'Empresas Parceiras' },
             { n: '5k+', t: 'Vagas de Emprego' },
-            { n: 'DF', t: 'Presenca Regional' }
+            { n: 'DF', t: 'Presença Regional' }
           ].map((stat, i) => (
             <motion.div
               key={i}

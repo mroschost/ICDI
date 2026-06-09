@@ -24,7 +24,7 @@ export const ContactSection = () => {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-[0.625rem] font-black uppercase tracking-widest text-slate-400 mb-1">Endereco</p>
+                    <p className="text-[0.625rem] font-black uppercase tracking-widest text-slate-400 mb-1">Endereço</p>
                     <p className="text-sm font-bold text-gov-blue-900">CLN 07, bloco K, lote 05, loja 01, Riacho Fundo I</p>
                   </div>
                 </div>
@@ -66,7 +66,7 @@ export const ContactSection = () => {
               </div>
               <div className="sm:col-span-2">
                 <button className="w-full py-5 bg-gov-blue-700 text-white rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-gov-blue-800 transition-all shadow-lg">
-                  Encaminhar Solicitao
+                  Encaminhar Solicitação
                 </button>
               </div>
             </form>

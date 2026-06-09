@@ -29,7 +29,7 @@ export const HeroSection = ({ projects, currentProjectIndex, setCurrentProjectIn
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-4 md:mb-8 text-gov-blue-900">
             Transformando vidas <br />
-            <span className="text-gov-blue-600 underline decoration-gov-yellow decoration-8 underline-offset-8">atraves da cultura</span>
+            <span className="text-gov-blue-600 underline decoration-gov-yellow decoration-8 underline-offset-8">através da cultura</span>
           </h1>
           <p className="text-base md:text-lg text-slate-600 mb-6 md:mb-10 max-w-lg leading-relaxed">
             Conheça nossa história e veja como planejamos construir um futuro mais justo e inclusivo para todos.

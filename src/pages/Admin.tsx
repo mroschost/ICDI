@@ -91,12 +91,12 @@ export const Admin = () => {
   };
 
   const handleForceSeed = async () => {
-    if (!window.confirm('Isso ira sincronizar os caminhos das fotos com os arquivos locais. Deseja continuar?')) return;
+    if (!window.confirm('Isso irá sincronizar os caminhos das fotos com os arquivos locais. Deseja continuar?')) return;
     setSyncing(true);
     try {
       await projectService.seed();
       await loadProjects();
-      alert('Sincronização concluida!');
+      alert('Sincronização concluída!');
     } catch (error) {
       console.error('Sync error:', error);
       alert('Erro na sincronização. Verifique o console.');
@@ -113,7 +113,7 @@ export const Admin = () => {
       setSessionUser(admin);
       await loadDashboard();
     } catch (error) {
-      setLoginError('Usuario ou senha invalidos.');
+      setLoginError('Usuário ou senha inválidos.');
     }
   };
 
@@ -165,7 +165,7 @@ export const Admin = () => {
 
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
-                <label className="text-[0.625rem] font-black uppercase tracking-widest text-slate-400 mb-2 block">Usuario</label>
+                <label className="text-[0.625rem] font-black uppercase tracking-widest text-slate-400 mb-2 block">Usuário</label>
                 <input
                   value={loginForm.username}
                   onChange={(e) => setLoginForm((current) => ({ ...current, username: e.target.value }))}
@@ -229,14 +229,14 @@ export const Admin = () => {
           <div className="flex flex-wrap items-center gap-4">
             <div className="text-right hidden md:block">
               <p className="text-sm font-bold text-gov-blue-900">
-                Status: {dbStatus === 'connected' ? 'Conectado' : dbStatus === 'error' ? 'Erro de Conexao' : 'Verificando...'}
+                Status: {dbStatus === 'connected' ? 'Conectado' : dbStatus === 'error' ? 'Erro de Conexão' : 'Verificando...'}
               </p>
               <button
                 onClick={handleForceSeed}
                 disabled={syncing}
                 className="text-[0.625rem] text-gov-blue-700 font-black uppercase tracking-tighter hover:underline disabled:opacity-50"
               >
-                {syncing ? 'Sincronizando...' : 'Forcar Sincronização de Fotos'}
+                {syncing ? 'Sincronizando...' : 'Forçar Sincronização de Fotos'}
               </button>
             </div>
             <button

@@ -36,7 +36,7 @@ const WhatsAppQuestionOptions = ({ control, qIndex, register }: { control: any, 
           onClick={() => append('')}
           className="text-[0.5625rem] font-black uppercase tracking-widest text-emerald-600 hover:text-emerald-700 flex items-center gap-1 bg-emerald-50 px-2 py-1 rounded-md"
         >
-          <Plus className="w-3 h-3" /> Add Opção
+          <Plus className="w-3 h-3" /> Adicionar Opção
         </button>
       </div>
       <div className="flex flex-wrap gap-2 min-h-8">

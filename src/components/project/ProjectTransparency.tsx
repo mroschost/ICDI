@@ -71,7 +71,7 @@ export const ProjectTransparency = ({ project, onSelectMedia }: ProjectTranspare
                     {fileName}
                   </p>
                   <p className="text-[0.5rem] md:text-[0.5625rem] text-slate-400 uppercase font-black tracking-widest mt-1">
-                    {isImage ? 'Registro Fotografico' : 'Documento PDF/DOC'}
+                    {isImage ? 'Registro Fotográfico' : 'Documento PDF/DOC'}
                   </p>
                 </div>
                 <div className="flex items-center gap-2">

@@ -1,14 +1,14 @@
 # ICDI
 
-Site institucional do **ICDI - Instituto de Capacitao, Desenvolvimento e Inovao**, com apresentao de projetos, pagina de transparncia e painel administrativo para gestao de conteudo.
+Site institucional do **ICDI - Instituto de Capacitação, Desenvolvimento e Inovação**, com apresentação de projetos, página de transparência e painel administrativo para gestão de conteúdo.
 
-## Viso Geral
+## Visão Geral
 
-O projeto foi construido com foco em:
+O projeto foi constru?do com foco em:
 
-- apresentao institucional do ICDI
+- apresentação institucional do ICDI
 - vitrine de projetos e iniciativas
-- area de transparncia com registros pblicos
+- área de transparência com registros públicos
 - painel administrativo para gerenciar projetos, widget do WhatsApp e contatos capturados
 
 ## Stack
@@ -23,13 +23,13 @@ O projeto foi construido com foco em:
 ## Estrutura Principal
 
 - `src/`:
-  codigo-fonte da aplicao
+  código-fonte da aplicação
 - `public/eventos_v2/`:
-  imagens usadas nas paginas de projetos
+  imagens usadas nas páginas de projetos
 - `public/content/transparency/`:
-  arquivos visuais usados na pagina de transparncia
+  arquivos visuais usados na página de transparência
 - `firebase-applet-config.json`:
-  configurao do Firebase usada pela aplicao
+  configuração do Firebase usada pela aplicação
 - `firestore.rules`:
   regras do Firestore
 
@@ -40,7 +40,7 @@ O projeto foi construido com foco em:
 - Node.js 18+
 - npm
 
-### Instalar dependencias
+### Instalar dependências
 
 ```bash
 npm install
@@ -52,11 +52,11 @@ npm install
 npm run dev
 ```
 
-Aplicao local:
+Aplica??o local:
 
 - `http://localhost:3000`
 
-### Gerar build de producao
+### Gerar build de produção
 
 ```bash
 npm run build
@@ -70,14 +70,14 @@ npm run lint
 
 ## Rotas Principais
 
-- `/`: pagina inicial
+- `/`: página inicial
 - `/projetos`: listagem de projetos
 - `/projeto/:slug`: detalhe de projeto
-- `/transparncia`: portal de transparncia
+- `/transparência`: portal de transparência
 - `/admin`: painel administrativo
 
-## Observaes
+## Observa??es
 
-- O repositorio foi enxugado para manter apenas os assets realmente usados pela aplicao.
-- Arquivos auxiliares de migrao, materiais extraidos, logs e fontes pesadas ficaram fora do versionamento.
-- O projeto utiliza configurao local do Firebase via `firebase-applet-config.json`.
+- O repositório foi enxugado para manter apenas os assets realmente usados pela aplicação.
+- Arquivos auxiliares de migra??o, materiais extra?dos, logs e fontes pesadas ficaram fora do versionamento.
+- O projeto utiliza configuração local do Firebase via `firebase-applet-config.json`.

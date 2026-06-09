@@ -58,7 +58,7 @@ export const AccessibilityControls = () => {
         <button 
           onClick={reset}
           className="p-1 hover:bg-white rounded transition-colors text-slate-400 hover:text-red-500"
-          title="Resetar"
+          title="Restaurar"
         >
           <RotateCcw className="w-3 h-3" />
         </button>

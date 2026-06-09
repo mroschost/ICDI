@@ -57,7 +57,7 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: 'teatro-vai-a-escola',
-    title: 'Teatro Vai a Escola',
+    title: 'Teatro Vai à Escola',
     description:
       'Projeto cultural desenvolvido em parceria com a Secretaria de Cultura, levando apresentações teatrais para 25 escolas públicas do Núcleo Bandeirante.',
     fullDescription:
@@ -85,7 +85,7 @@ export const PROJECTS: Project[] = [
     color: 'bg-blue-500'
   },
   {
-    slug: 'msica-teatro-e-cidadania',
+    slug: 'musica-teatro-e-cidadania',
     title: 'Música, Teatro e Cidadania',
     description:
       'Projeto realizado nas regiões do Cruzeiro e Água Quente, promovendo apresentações artísticas e atividades culturais abertas à comunidade.',
@@ -97,7 +97,7 @@ export const PROJECTS: Project[] = [
       '/eventos_v2/fotos/foto_02_pagina_08.jpg'
     ],
     transparency: [
-      '/content/transparency/msica-teatro-e-cidadania/saveclip.app-428645559-17878332906033896-7526550558968735316-n.jpg'
+      '/content/transparency/musica-teatro-e-cidadania/saveclip.app-428645559-17878332906033896-7526550558968735316-n.jpg'
     ],
     objectives: [
       'Promover inclusão social por meio da cultura',
@@ -201,7 +201,7 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: 'teatro-vai-a-escola-2-edicao',
-    title: 'Teatro Vai a Escola - 2 Edição',
+    title: 'Teatro Vai à Escola - 2ª Edição',
     description:
       'Segunda edição do projeto realizada em 18 escolas públicas da Coordenação Regional de Ensino de Samambaia.',
     fullDescription:

@@ -78,7 +78,7 @@ export const Projects = () => {
             <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-gov-yellow/10 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
 
-            <h2 className="text-2xl md:text-5xl font-bold tracking-tight mb-6 md:mb-8 relative z-10 italic serif">Tem uma sugestao de projeto?</h2>
+            <h2 className="text-2xl md:text-5xl font-bold tracking-tight mb-6 md:mb-8 relative z-10 italic serif">Tem uma sugestão de projeto?</h2>
             <p className="text-gov-blue-100 text-base md:text-lg max-w-2xl mx-auto mb-8 md:mb-12 relative z-10 opacity-90">
               O ICDI está sempre em busca de novas frentes de atuação para melhorar o Distrito Federal. Entre em contato conosco para parcerias.
             </p>

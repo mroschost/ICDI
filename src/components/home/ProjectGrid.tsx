@@ -16,7 +16,7 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
       <div className="max-w-3xl mx-auto text-center mb-8 md:mb-16">
         <span className="text-[0.625rem] font-black uppercase tracking-widest text-gov-blue-600 mb-4 md:mb-6 block">Atuação Institucional</span>
         <h2 className="text-3xl md:text-6xl font-bold tracking-tight mb-4 md:mb-8 text-gov-blue-900">Eixos de Impacto</h2>
-        <p className="text-sm md:text-lg text-slate-600 leading-relaxed px-2 md:px-0">Desenvolvemos estrategias solidas para o desenvolvimento humano e social no DF. Clique para ver detalhes.</p>
+        <p className="text-sm md:text-lg text-slate-600 leading-relaxed px-2 md:px-0">Desenvolvemos estratégias sólidas para o desenvolvimento humano e social no DF. Clique para ver detalhes.</p>
       </div>
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
