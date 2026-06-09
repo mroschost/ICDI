@@ -24,15 +24,15 @@ export const HeroSection = ({ projects, currentProjectIndex, setCurrentProjectIn
           <div className="flex items-center gap-3 mb-4 md:mb-6">
             <span className="w-10 h-1 bg-gov-yellow rounded-full"></span>
             <span className="text-[0.625rem] font-black uppercase tracking-[0.2em] text-gov-blue-700">
-              Inovacao • Desenvolvimento • Impacto
+              Cultura - Inovacao - Capacitacao
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-4 md:mb-8 text-gov-blue-900">
-            Transformando o <br />
-            <span className="text-gov-blue-600 underline decoration-gov-yellow decoration-8 underline-offset-8">Distrito Federal</span>
+            Transformando vidas <br />
+            <span className="text-gov-blue-600 underline decoration-gov-yellow decoration-8 underline-offset-8">atraves da cultura</span>
           </h1>
           <p className="text-base md:text-lg text-slate-600 mb-6 md:mb-10 max-w-lg leading-relaxed">
-            O ICDI nasceu com o proposito de transformar vidas por meio da cultura, da educacao e da inovacao, oferecendo oportunidades que inspiram protagonismo e mudancas reais.
+            Conheca nossa historia e veja como planejamos construir um futuro mais justo e inclusivo para todos.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link to="/projetos" className="px-8 py-4 bg-gov-blue-700 text-white rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-gov-blue-800 transition-all flex items-center gap-3 group shadow-lg">

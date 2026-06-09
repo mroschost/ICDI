@@ -32,9 +32,9 @@ export const PROJECTS: Project[] = [
     slug: 'candangao-de-quadrilha-junina',
     title: 'Candangao de Quadrilha Junina',
     description:
-      'Projeto cultural realizado em Ceilandia para valorizar as tradicoes juninas e a cultura popular do Distrito Federal.',
+      'Um projeto cultural realizado em Ceilandia voltado a valorizacao das tradicoes juninas e da cultura popular do Distrito Federal.',
     fullDescription:
-      'Projeto cultural realizado na Regiao Administrativa de Ceilandia - DF, voltado a valorizacao das tradicoes juninas e da cultura popular do Distrito Federal. A iniciativa reuniu grupos de quadrilha junina e artistas locais em uma programacao cultural que fortaleceu a identidade cultural, incentivou a participacao da comunidade e promoveu o acesso as manifestacoes tradicionais do periodo junino. Termo de Fomento n 61/2023, em parceria com a Secretaria de Cultura e Economia Criativa.',
+      'Um projeto cultural realizado em Ceilandia voltado a valorizacao das tradicoes juninas e da cultura popular do Distrito Federal. A iniciativa reuniu grupos de quadrilha, artistas locais e a comunidade em uma programacao festiva que fortaleceu a identidade cultural, incentivou a participacao popular e promoveu o acesso as manifestacoes tradicionais brasileiras.',
     image: '/eventos_v2/fotos/foto_01_pagina_06.jpg',
     gallery: [
       '/eventos_v2/fotos/foto_01_pagina_06.jpg',
@@ -42,14 +42,15 @@ export const PROJECTS: Project[] = [
     ],
     transparency: [],
     objectives: [
-      'Valorizar as tradicoes juninas e a cultura popular do DF',
-      'Incentivar a participacao comunitaria em programacao cultural gratuita',
-      'Fortalecer a identidade cultural de Ceilandia'
+      'Valorizar as tradicoes juninas do Distrito Federal',
+      'Incentivar a participacao comunitaria',
+      'Promover artistas e grupos culturais locais',
+      'Preservar manifestacoes populares brasileiras'
     ],
     results: [
-      'Programacao com grupos de quadrilha e artistas locais',
-      'Fortalecimento do calendario cultural junino no DF',
-      'Maior acesso da comunidade a manifestacoes tradicionais'
+      'Fortalecimento da cultura regional',
+      'Grande participacao popular',
+      'Incentivo a economia criativa local'
     ],
     iconName: 'Users',
     color: 'bg-red-500'
@@ -58,9 +59,9 @@ export const PROJECTS: Project[] = [
     slug: 'teatro-vai-a-escola',
     title: 'Teatro Vai a Escola',
     description:
-      'Projeto realizado em 25 escolas publicas do Nucleo Bandeirante para aproximar estudantes da rede publica das artes cenicas.',
+      'Projeto cultural desenvolvido em parceria com a Secretaria de Cultura, levando apresentacoes teatrais para 25 escolas publicas do Nucleo Bandeirante.',
     fullDescription:
-      'Projeto cultural realizado em parceria com a Secretaria de Cultura e Economia Criativa do Distrito Federal, que levou apresentacoes teatrais para 25 escolas publicas da Coordenacao Regional de Ensino do Nucleo Bandeirante. A iniciativa promoveu o acesso a arte e a cultura dentro do ambiente escolar, aproximando estudantes da rede publica das artes cenicas por meio de apresentacoes de grupos artisticos locais. Termo de Fomento n 98/2023.',
+      'Projeto cultural desenvolvido em parceria com a Secretaria de Cultura, levando apresentacoes teatrais para 25 escolas publicas da Coordenacao Regional de Ensino do Nucleo Bandeirante. A acao aproximou estudantes da rede publica das artes cenicas e ampliou o acesso a cultura dentro do ambiente escolar.',
     image: '/eventos_v2/fotos/foto_01_pagina_07.jpg',
     gallery: [
       '/eventos_v2/fotos/foto_01_pagina_07.jpg',
@@ -70,14 +71,15 @@ export const PROJECTS: Project[] = [
       '/content/transparency/teatro-vai-a-escola/saveclip.app-459320446-17903781414033896-5790567167841414622-n.jpg'
     ],
     objectives: [
-      'Levar arte e cultura para o ambiente escolar',
-      'Aproximar estudantes das artes cenicas por meio de grupos locais',
-      'Fortalecer a escola publica como espaco de experiencia cultural'
+      'Democratizar o acesso ao teatro',
+      'Levar cultura ao ambiente escolar',
+      'Estimular o interesse artistico dos estudantes',
+      'Valorizar grupos teatrais locais'
     ],
     results: [
-      '25 escolas publicas atendidas no Nucleo Bandeirante',
-      'Ampliacao do acesso a apresentacoes teatrais na rede publica',
-      'Parceria consolidada com a Secretaria de Cultura e Economia Criativa'
+      '25 escolas atendidas',
+      'Ampliacao do repertorio cultural estudantil',
+      'Fortalecimento da educacao cultural'
     ],
     iconName: 'Theater',
     color: 'bg-blue-500'
@@ -86,9 +88,9 @@ export const PROJECTS: Project[] = [
     slug: 'musica-teatro-e-cidadania',
     title: 'Musica, Teatro e Cidadania',
     description:
-      'Projeto realizado no Cruzeiro e em Agua Quente com apresentacoes artisticas e acoes culturais voltadas a comunidade.',
+      'Projeto realizado nas regioes do Cruzeiro e Agua Quente, promovendo apresentacoes artisticas e atividades culturais abertas a comunidade.',
     fullDescription:
-      'Projeto cultural realizado nas regioes administrativas do Cruzeiro - DF e Agua Quente - DF, promovendo apresentacoes artisticas e atividades culturais voltadas a comunidade. A iniciativa levou musica, teatro e acoes culturais como ferramentas de inclusao social, incentivando o acesso a cultura e fortalecendo a participacao da comunidade em atividades artisticas. Termo de Fomento n 122/2023, em parceria com a Secretaria de Cultura e Economia Criativa.',
+      'Projeto realizado nas regioes do Cruzeiro e Agua Quente, promovendo apresentacoes artisticas e atividades culturais abertas a comunidade. A iniciativa utilizou a arte como ferramenta de inclusao social, convivencia comunitaria e fortalecimento da cidadania.',
     image: '/eventos_v2/fotos/foto_01_pagina_08.jpg',
     gallery: [
       '/eventos_v2/fotos/foto_01_pagina_08.jpg',
@@ -98,14 +100,15 @@ export const PROJECTS: Project[] = [
       '/content/transparency/musica-teatro-e-cidadania/saveclip.app-428645559-17878332906033896-7526550558968735316-n.jpg'
     ],
     objectives: [
-      'Promover inclusao social por meio da musica, teatro e cultura',
-      'Fortalecer a participacao comunitaria em atividades artisticas',
-      'Levar acoes culturais a territorios com alta relevancia social'
+      'Promover inclusao social por meio da cultura',
+      'Incentivar participacao comunitaria',
+      'Levar musica e teatro a espacos publicos',
+      'Estimular cidadania e convivencia social'
     ],
     results: [
-      'Atuacao simultanea no Cruzeiro e em Agua Quente',
-      'Programacao artistica voltada a comunidade',
-      'Cultura utilizada como ferramenta de cidadania e inclusao'
+      'Maior acesso cultural nas regioes atendidas',
+      'Engajamento comunitario',
+      'Valorizacao da arte local'
     ],
     iconName: 'Music',
     color: 'bg-teal-500'
@@ -114,9 +117,9 @@ export const PROJECTS: Project[] = [
     slug: 'estrutural-20-anos-de-cultura',
     title: 'Estrutural - 20 Anos de Cultura',
     description:
-      'Evento comemorativo realizado na Estrutural com programacao artistica e cultural voltada a comunidade.',
+      'Projeto comemorativo realizado na cidade Estrutural em celebracao aos 20 anos da regiao administrativa.',
     fullDescription:
-      'Projeto cultural realizado na Regiao Administrativa da Estrutural - DF, em comemoracao aos 20 anos da cidade, com programacao artistica e cultural voltada a comunidade. A iniciativa promoveu apresentacoes musicais e atividades culturais, celebrando a historia da cidade e fortalecendo o acesso a cultura e a ocupacao dos espacos publicos. Termo de Fomento n 05/2024, em parceria com a Secretaria de Cultura e Economia Criativa.',
+      'Projeto comemorativo realizado na cidade Estrutural em celebracao aos 20 anos da regiao administrativa. Com apresentacoes musicais e atividades culturais, o evento valorizou a historia local, promoveu lazer e fortaleceu a ocupacao positiva dos espacos publicos.',
     image: '/eventos_v2/fotos/foto_01_pagina_09.jpg',
     gallery: [
       '/eventos_v2/fotos/foto_01_pagina_09.jpg',
@@ -127,14 +130,15 @@ export const PROJECTS: Project[] = [
       '/content/transparency/estrutural-20-de-cultura/saveclip.app-433336629-17882799939033896-1055833069955455790-n.jpg'
     ],
     objectives: [
-      'Celebrar a historia da cidade com programacao cultural acessivel',
-      'Valorizar artistas e manifestacoes culturais locais',
-      'Fortalecer a ocupacao cultural dos espacos publicos'
+      'Celebrar a historia da cidade',
+      'Valorizar identidade cultural local',
+      'Oferecer programacao gratuita a populacao',
+      'Fortalecer espacos publicos por meio da cultura'
     ],
     results: [
-      'Comemoracao dos 20 anos da Estrutural',
-      'Apresentacoes musicais e atividades para a comunidade',
-      'Maior acesso da populacao a programacao cultural gratuita'
+      'Grande participacao popular',
+      'Fortalecimento do sentimento de pertencimento',
+      'Acesso gratuito a cultura'
     ],
     iconName: 'MapPin',
     color: 'bg-yellow-500'
@@ -143,9 +147,9 @@ export const PROJECTS: Project[] = [
     slug: 'anima-escola',
     title: 'Anima Escola',
     description:
-      'Acao institucional vinculada ao CEF 15 de Taguatinga e registrada no portfolio 2026 do ICDI.',
+      'Projeto educacional e cultural realizado no CEF 15 de Taguatinga, com atividades criativas e acoes voltadas ao desenvolvimento estudantil.',
     fullDescription:
-      'Projeto institucional identificado no material atualizado do ICDI como iniciativa realizada no CEF 15 de Taguatinga. O portfolio extraido registra o Anima Escola no contexto do Termo de Fomento n 14/2024 com a Secretaria de Cultura e Economia Criativa, reforcando a frente de atuacao do instituto em educacao, cultura e experiencias formativas no ambiente escolar.',
+      'Projeto educacional e cultural realizado no CEF 15 de Taguatinga, com atividades criativas e acoes voltadas ao desenvolvimento estudantil. A iniciativa incentivou expressao artistica, integracao social e experiencias educativas complementares.',
     image: '/eventos_v2/fotos/foto_01_pagina_10.jpg',
     gallery: [
       '/eventos_v2/fotos/foto_01_pagina_10.jpg',
@@ -154,14 +158,15 @@ export const PROJECTS: Project[] = [
     ],
     transparency: [],
     objectives: [
-      'Ampliar experiencias culturais e educativas no ambiente escolar',
-      'Fortalecer a presenca do ICDI em projetos de formacao',
-      'Conectar cultura e educacao em acoes continuadas'
+      'Incentivar criatividade estudantil',
+      'Promover atividades culturais na escola',
+      'Estimular integracao entre alunos',
+      'Complementar a formacao educacional'
     ],
     results: [
-      'Projeto registrado no portfolio institucional 2026',
-      'Atuacao vinculada ao CEF 15 de Taguatinga',
-      'Alinhamento com a frente de cultura e educacao do ICDI'
+      'Participacao ativa dos estudantes',
+      'Ambiente escolar mais dinamico',
+      'Desenvolvimento criativo e social'
     ],
     iconName: 'BookOpen',
     color: 'bg-violet-500'
@@ -170,9 +175,9 @@ export const PROJECTS: Project[] = [
     slug: 'varjao-21-anos-de-cultura',
     title: 'Varjao - 21 Anos de Cultura',
     description:
-      'Evento cultural realizado no Varjao em celebracao aos 21 anos da cidade, com atracoes musicais e apresentacoes artisticas.',
+      'Evento comemorativo realizado no Varjao em celebracao aos 21 anos da cidade.',
     fullDescription:
-      'Evento cultural realizado na Regiao Administrativa do Varjao em celebracao aos 21 anos de historia da cidade, reunindo diversas atracoes musicais e apresentacoes artisticas para a comunidade. A programacao contou com artistas locais e regionais, promovendo a valorizacao da cultura popular, o acesso a arte e a ocupacao cultural dos espacos publicos. Termo de Fomento n 16/2024, em parceria com a Secretaria de Cultura e Economia Criativa.',
+      'Evento comemorativo realizado no Varjao em celebracao aos 21 anos da cidade. A programacao reuniu atracoes musicais, apresentacoes artisticas e atividades abertas ao publico, valorizando a cultura popular e fortalecendo os vinculos comunitarios.',
     image: '/eventos_v2/fotos/foto_01_pagina_11.jpg',
     gallery: [
       '/eventos_v2/fotos/foto_01_pagina_11.jpg',
@@ -181,14 +186,15 @@ export const PROJECTS: Project[] = [
     ],
     transparency: [],
     objectives: [
-      'Celebrar a historia do Varjao com acesso gratuito a cultura',
-      'Valorizar artistas locais e regionais em programacao comunitaria',
-      'Estimular a ocupacao cultural dos espacos publicos'
+      'Celebrar o aniversario da cidade',
+      'Valorizar artistas locais e regionais',
+      'Promover convivencia comunitaria',
+      'Incentivar ocupacao cultural urbana'
     ],
     results: [
-      'Comemoracao dos 21 anos do Varjao',
-      'Atracoes musicais e artisticas para a comunidade',
-      'Fortalecimento da cultura popular e do pertencimento local'
+      'Participacao popular expressiva',
+      'Fortalecimento cultural local',
+      'Integracao comunitaria'
     ],
     iconName: 'MapPin',
     color: 'bg-orange-500'
@@ -197,9 +203,9 @@ export const PROJECTS: Project[] = [
     slug: 'teatro-vai-a-escola-2-edicao',
     title: 'Teatro Vai a Escola - 2 Edicao',
     description:
-      'Projeto realizado em Samambaia com apresentacoes teatrais em 18 escolas publicas da rede de ensino.',
+      'Segunda edicao do projeto realizada em 18 escolas publicas da Coordenacao Regional de Ensino de Samambaia.',
     fullDescription:
-      'Projeto cultural realizado em parceria com a Secretaria de Cultura e Economia Criativa do Distrito Federal, levando apresentacoes teatrais ao ambiente escolar na regiao administrativa de Samambaia - DF. A iniciativa promoveu o acesso a arte e a cultura para estudantes da rede publica, aproximando o teatro do cotidiano escolar e incentivando o desenvolvimento cultural e educacional. O projeto alcancou 18 escolas publicas da Coordenacao Regional de Ensino de Samambaia. Termo de Fomento n 95/2024.',
+      'Segunda edicao do projeto realizada em 18 escolas publicas da Coordenacao Regional de Ensino de Samambaia. A iniciativa levou apresentacoes teatrais ao ambiente escolar, incentivando cultura, imaginacao e desenvolvimento educacional.',
     image: '/eventos_v2/fotos/foto_01_pagina_12.jpg',
     gallery: [
       '/eventos_v2/fotos/foto_01_pagina_12.jpg',
@@ -209,14 +215,15 @@ export const PROJECTS: Project[] = [
       '/content/transparency/teatro-vai-a-escola-2-edicao/saveclip.app-655568301-18090463583145684-6680947092755261239-n.jpg'
     ],
     objectives: [
-      'Levar o teatro ao cotidiano escolar em Samambaia',
-      'Promover acesso a arte para estudantes da rede publica',
-      'Fortalecer o desenvolvimento cultural e educacional'
+      'Expandir acesso ao teatro nas escolas publicas',
+      'Incentivar formacao cultural estudantil',
+      'Levar arte ao cotidiano escolar',
+      'Apoiar artistas e grupos locais'
     ],
     results: [
-      '18 escolas publicas alcancadas em Samambaia',
-      'Continuidade da frente Teatro Vai a Escola',
-      'Expansao do acesso a arte no ambiente escolar'
+      '18 escolas atendidas',
+      'Maior acesso a cultura estudantil',
+      'Impacto positivo no ambiente escolar'
     ],
     iconName: 'Theater',
     color: 'bg-indigo-500'
@@ -225,9 +232,9 @@ export const PROJECTS: Project[] = [
     slug: 'festival-da-crianca',
     title: 'Festival da Crianca',
     description:
-      'Festival realizado no Parque da Cidade com atividades culturais e recreativas voltadas ao publico infantil e as familias.',
+      'Projeto cultural voltado ao publico infantil e as familias, com atividades artisticas gratuitas em espacos publicos.',
     fullDescription:
-      'Realizado no Parque da Cidade - Parquinho Ana Lidia, o Festival da Crianca promoveu atividades culturais e recreativas voltadas ao publico infantil e as familias do Distrito Federal. A iniciativa levou apresentacoes artisticas, atividades ludicas e acoes culturais, incentivando o acesso a cultura, ao lazer e a convivencia comunitaria em um dos principais espacos publicos de Brasilia. Termo de Fomento n 98/2024, em parceria com a Secretaria de Cultura e Economia Criativa.',
+      'Um projeto cultural voltado ao publico infantil e as familias, que promove o acesso a cultura por meio de atividades artisticas gratuitas em espacos publicos. Com programacao de teatro, musica, circo e contacao de historias, o projeto estimula criatividade, convivencia comunitaria e inclusao social.',
     image: '/eventos_v2/fotos/foto_01_pagina_13.jpg',
     gallery: [
       '/eventos_v2/fotos/foto_01_pagina_13.jpg',
@@ -238,14 +245,15 @@ export const PROJECTS: Project[] = [
       '/content/transparency/festival-da-crianca/saveclip.app-467355060-17912305977033896-4844606768554122691-n.jpg'
     ],
     objectives: [
-      'Promover acesso a cultura e ao lazer para criancas e familias',
-      'Oferecer atividades ludicas e apresentacoes artisticas gratuitas',
-      'Fortalecer a convivencia comunitaria em espaco publico'
+      'Promover acesso a cultura para criancas e familias',
+      'Oferecer atividades artisticas gratuitas',
+      'Valorizar artistas locais',
+      'Estimular criatividade infantil'
     ],
     results: [
-      'Evento realizado no Parquinho Ana Lidia, no Parque da Cidade',
-      'Programacao cultural voltada ao publico infantil',
-      'Ocupacao qualificada de um dos principais espacos publicos de Brasilia'
+      'Espacos publicos transformados em areas culturais',
+      'Fortalecimento comunitario',
+      'Ampliacao do acesso infantil a cultura'
     ],
     iconName: 'Heart',
     color: 'bg-pink-500'

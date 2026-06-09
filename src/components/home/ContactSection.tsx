@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Instagram, MapPin } from 'lucide-react';
+import { Mail, Instagram, MapPin, Phone } from 'lucide-react';
 
 export const ContactSection = () => {
   return (
@@ -10,6 +10,24 @@ export const ContactSection = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-gov-blue-900 serif italic">Fale Conosco</h2>
               <div className="space-y-8 md:space-y-10">
+                <div className="flex gap-4 md:gap-6">
+                  <div className="w-10 h-10 bg-gov-blue-50 rounded-lg flex items-center justify-center text-gov-blue-700 shrink-0">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-[0.625rem] font-black uppercase tracking-widest text-slate-400 mb-1">Telefone</p>
+                    <p className="text-sm font-bold text-gov-blue-900">61 99968-2497</p>
+                  </div>
+                </div>
+                <div className="flex gap-4 md:gap-6">
+                  <div className="w-10 h-10 bg-gov-blue-50 rounded-lg flex items-center justify-center text-gov-blue-700 shrink-0">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-[0.625rem] font-black uppercase tracking-widest text-slate-400 mb-1">Endereco</p>
+                    <p className="text-sm font-bold text-gov-blue-900">CLN 07, bloco K, lote 05, loja 01, Riacho Fundo I</p>
+                  </div>
+                </div>
                 <div className="flex gap-4 md:gap-6">
                   <div className="w-10 h-10 bg-gov-blue-50 rounded-lg flex items-center justify-center text-gov-blue-700 shrink-0">
                     <Mail className="w-5 h-5" />
@@ -26,15 +44,6 @@ export const ContactSection = () => {
                   <div>
                     <p className="text-[0.625rem] font-black uppercase tracking-widest text-slate-400 mb-1">Instagram</p>
                     <p className="text-sm font-bold text-gov-blue-900">@icdi_df</p>
-                  </div>
-                </div>
-                <div className="flex gap-4 md:gap-6">
-                  <div className="w-10 h-10 bg-gov-blue-50 rounded-lg flex items-center justify-center text-gov-blue-700 shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-[0.625rem] font-black uppercase tracking-widest text-slate-400 mb-1">Atuacao</p>
-                    <p className="text-sm font-bold text-gov-blue-900">Distrito Federal</p>
                   </div>
                 </div>
               </div>
