@@ -174,7 +174,7 @@ VALUES
   ),
   (
     'teatro-vai-a-escola-2-edio',
-    'Teatro Vai a Escola - 2 Edio',
+    'Teatro Vai a Escola - 2 Edição',
     'Segunda ediï¿½ï¿½o do projeto realizada em 18 escolas pï¿½blicas da Coordenaï¿½ï¿½o Regional de Ensino de Samambaia.',
     'Segunda ediï¿½ï¿½o do projeto realizada em 18 escolas pï¿½blicas da Coordenaï¿½ï¿½o Regional de Ensino de Samambaia. A iniciativa levou apresentaï¿½ï¿½es teatrais ao ambiente escolar, incentivando cultura, imaginaï¿½ï¿½o e desenvolvimento educacional.',
     '/eventos_v2/fotos/foto_01_pagina_12.jpg',
@@ -281,6 +281,7 @@ ON DUPLICATE KEY UPDATE
   role = VALUES(role),
   is_active = VALUES(is_active),
   updated_at = CURRENT_TIMESTAMP;
+
 
 
 
