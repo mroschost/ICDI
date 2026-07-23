@@ -16,14 +16,16 @@ import {
 import { projectService } from '../services/projectService';
 import { configService } from '../services/configService';
 import { adminSessionService, AdminSessionUser } from '../services/adminSessionService';
-import { Project, WhatsAppConfig } from '../types';
+import { Project, WhatsAppConfig, NewsArticle } from '../types';
 import { LucideIcon } from '../components/LucideIcon';
 import { getSafeImageUrl } from '../lib/imageUtils';
 import { LeadsPanel } from '../components/LeadsPanel';
 import { ProjectForm } from '../components/admin/ProjectForm';
 import { WhatsAppConfigForm } from '../components/admin/WhatsAppConfigForm';
+import { NewsForm } from '../components/admin/NewsForm';
+import { newsService } from '../services/newsService';
 
-type ActiveTab = 'projects' | 'transparency' | 'whatsapp' | 'leads';
+type ActiveTab = 'projects' | 'transparency' | 'whatsapp' | 'leads' | 'news';
 
 export const Admin = () => {
   const [sessionUser, setSessionUser] = useState<AdminSessionUser | null>(null);
@@ -32,6 +34,9 @@ export const Admin = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [editingProject, setEditingProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [news, setNews] = useState<NewsArticle[]>([]);
+  const [editingNews, setEditingNews] = useState<NewsArticle | null>(null);
+  const [isNewsModalOpen, setIsNewsModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<ActiveTab>('projects');
   const [whatsappConfig, setWhatsappConfig] = useState<WhatsAppConfig | null>(null);
   const [syncing, setSyncing] = useState(false);
@@ -57,7 +62,7 @@ export const Admin = () => {
 
   const loadDashboard = async () => {
     setDashboardLoading(true);
-    await Promise.allSettled([checkConnection(), loadProjects(), loadWhatsAppConfig()]);
+    await Promise.allSettled([checkConnection(), loadProjects(), loadWhatsAppConfig(), loadNews()]);
     setDashboardLoading(false);
   };
 
@@ -88,6 +93,23 @@ export const Admin = () => {
     } catch (error) {
       console.error('WhatsApp config load failed:', error);
     }
+  };
+
+  const loadNews = async () => {
+    const data = await newsService.getAllAdmin();
+    setNews(data);
+  };
+
+  const handleDeleteNews = async (slug: string) => {
+    if (window.confirm('Tem certeza que deseja excluir esta notícia?')) {
+      await newsService.delete(slug);
+      await loadNews();
+    }
+  };
+
+  const openEditNewsModal = (article: NewsArticle | null = null) => {
+    setEditingNews(article);
+    setIsNewsModalOpen(true);
   };
 
   const handleForceSeed = async () => {
@@ -258,6 +280,7 @@ export const Admin = () => {
           {([
             ['projects', 'Projetos'],
             ['transparency', 'Transparência'],
+            ['news', 'Notícias'],
             ['whatsapp', 'WhatsApp Widget'],
             ['leads', 'Contatos Capturados'],
           ] as Array<[ActiveTab, string]>).map(([tab, label]) => (
@@ -393,6 +416,90 @@ export const Admin = () => {
             </div>
           )}
 
+          {activeTab === 'news' && (
+            <div>
+              <div className="flex justify-between items-center mb-8">
+                <h2 className="text-2xl font-bold text-gov-blue-900">Gerenciar Notícias</h2>
+                <button
+                  onClick={() => openEditNewsModal()}
+                  className="px-8 py-4 bg-gov-blue-700 text-white rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-gov-blue-800 transition-all shadow-lg flex items-center gap-3"
+                >
+                  <Plus className="w-4 h-4" /> Nova Notícia
+                </button>
+              </div>
+
+              {news.length === 0 ? (
+                <div className="col-span-full py-20 text-center bg-white rounded-[3rem] border-2 border-dashed border-slate-100">
+                  <p className="text-slate-400 mb-8 italic">Nenhuma notícia encontrada.</p>
+                  <button
+                    onClick={async () => {
+                      await newsService.seed();
+                      await loadNews();
+                    }}
+                    className="px-8 py-4 bg-gov-blue-50 text-gov-blue-700 rounded-2xl font-bold text-[0.625rem] uppercase tracking-widest hover:bg-gov-blue-700 hover:text-white transition-all shadow-sm"
+                  >
+                    Restaurar Dados Iniciais
+                  </button>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {news.map((article) => (
+                    <div
+                      key={article.slug}
+                      className="bg-white rounded-[2rem] border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
+                    >
+                      <div className="h-40 overflow-hidden">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="p-8">
+                        <p className="text-xs text-slate-400 mb-2">{new Date(article.date).toLocaleDateString('pt-BR')}</p>
+                        <h3 className="text-lg font-bold text-gov-blue-900 mb-2 truncate">{article.title}</h3>
+                        <p className="text-xs text-slate-500 mb-4 line-clamp-2">{article.excerpt}</p>
+                        <div className="flex items-center gap-2">
+                          {article.published ? (
+                            <span className="px-3 py-1 bg-green-50 text-green-700 rounded-full text-[0.5rem] font-black uppercase tracking-widest">Publicado</span>
+                          ) : (
+                            <span className="px-3 py-1 bg-slate-100 text-slate-400 rounded-full text-[0.5rem] font-black uppercase tracking-widest">Rascunho</span>
+                          )}
+                        </div>
+                        <div className="flex items-center justify-between pt-4 mt-4 border-t border-slate-100">
+                          <div className="flex gap-2">
+                            <button
+                              onClick={() => openEditNewsModal(article)}
+                              className="p-3 bg-slate-50 text-slate-400 hover:text-gov-blue-700 hover:bg-gov-blue-50 rounded-xl transition-colors"
+                              title="Editar"
+                            >
+                              <Edit3 className="w-4 h-4" />
+                            </button>
+                            <button
+                              onClick={() => handleDeleteNews(article.slug)}
+                              className="p-3 bg-slate-50 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition-colors"
+                              title="Excluir"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          </div>
+                          <a
+                            href={`/noticia/${article.slug}`}
+                            target="_blank"
+                            className="p-3 text-gov-blue-700 hover:bg-gov-blue-50 rounded-xl transition-colors"
+                            rel="noreferrer"
+                          >
+                            <Eye className="w-5 h-5" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
           {activeTab === 'whatsapp' && (
             <div className="max-w-4xl mx-auto">
               <WhatsAppConfigForm config={whatsappConfig} onSuccess={loadWhatsAppConfig} />
@@ -408,6 +515,49 @@ export const Admin = () => {
       </div>
 
       <AnimatePresence>
+        {isNewsModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-gov-blue-900/60 backdrop-blur-md"
+              onClick={() => setIsNewsModalOpen(false)}
+            />
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              className="bg-white w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-[3rem] shadow-2xl relative z-10 flex flex-col"
+            >
+              <div className="p-10 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-1 bg-gov-yellow rounded-full" />
+                    <span className="text-[0.625rem] font-black uppercase tracking-widest text-gov-blue-700">Gerenciar Notícias</span>
+                  </div>
+                  <h2 className="text-3xl font-bold text-gov-blue-900">{editingNews ? 'Editar Notícia' : 'Nova Notícia'}</h2>
+                </div>
+                <button
+                  onClick={() => setIsNewsModalOpen(false)}
+                  className="p-4 rounded-2xl hover:bg-white hover:shadow-lg transition-all text-slate-400 hover:text-gov-blue-900"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              <div className="flex-1 overflow-y-auto p-10">
+                <NewsForm
+                  article={editingNews}
+                  onSuccess={() => {
+                    setIsNewsModalOpen(false);
+                    loadNews();
+                  }}
+                />
+              </div>
+            </motion.div>
+          </div>
+        )}
+
         {isModalOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
             <motion.div

@@ -1,37 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Poppins", ui-sans-serif, system-ui, sans-serif;
   
-  --color-gov-blue-50: #eff6ff;
-  --color-gov-blue-100: #dbeafe;
-  --color-gov-blue-600: #2563eb;
-  --color-gov-blue-700: #1d4ed8;
-  --color-gov-blue-800: #1e40af;
-  --color-gov-blue-900: #1e3a8a;
+  --color-gov-blue-50: #f1f0f8;
+  --color-gov-blue-100: #dedcf0;
+  --color-gov-blue-600: #3b58af;
+  --color-gov-blue-700: #352d83;
+  --color-gov-blue-800: #2f2875;
+  --color-gov-blue-900: #2a2368;
   
-  --color-gov-yellow: #facc15;
-  --color-gov-yellow-dark: #eab308;
+  --color-gov-yellow: #fbf137;
+  --color-gov-yellow-dark: #e6dc20;
 }
 
 @layer base {
   html, body {
-    @apply bg-white text-slate-900 antialiased;
+    @apply bg-[#f7f7f7] text-[#2A2368] antialiased;
+    font-family: var(--font-sans);
   }
 
   .serif {
     font-family: var(--font-serif);
+    font-style: normal !important;
   }
 }
 
 @layer components {
   .gov-card {
-    @apply bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all rounded-xl;
+    @apply bg-white border border-[#2A2368]/10 shadow-sm hover:shadow-xl transition-all rounded-none;
   }
   
   .gov-section-stripe {
-    @apply h-1.5 w-full bg-gov-yellow;
+    @apply h-1.5 w-full bg-[#DE5121];
   }
+}
+
+@layer utilities {
+  .rounded-3xl, .rounded-\[2rem\] { border-radius: 0 !important; }
+  .rounded-2xl { border-radius: .25rem !important; }
 }

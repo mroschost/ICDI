@@ -262,23 +262,25 @@ export const PROJECTS: Project[] = [
     slug: 'arraia-das-cidades',
     title: 'Arraiá das Cidades',
     description:
-      'Circuito cultural que percorreu cinco cidades do Distrito Federal, fortalecendo a economia local e as tradições juninas.',
+      'Projeto itinerante que percorreu cinco cidades do Distrito Federal promovendo grande celebração da cultura popular. O evento reuniu artistas, empreendedores e milhares de participantes, fortalecendo a economia local e valorizando as tradições juninas.',
     fullDescription:
-      'O projeto percorreu Park Way, Vila Planalto, Candangolândia, Núcleo Bandeirante e Riacho Fundo I, promovendo uma grande celebração da cultura popular. O evento reuniu 35 artistas, contou com a participação de mais de 75 microempreendedores na praça de alimentação e recebeu milhares de pessoas, fortalecendo a economia local e valorizando as tradições juninas. Termo de Fomento n 64/2025, em parceria com a Secretaria de Cultura e Economia Criativa.',
+      'Projeto itinerante que percorreu cinco cidades do Distrito Federal promovendo grande celebração da cultura popular. O evento reuniu artistas, empreendedores e milhares de participantes, fortalecendo a economia local e valorizando as tradições juninas.',
     image: '/eventos_v2/fotos/foto_01_pagina_14.jpg',
     gallery: ['/eventos_v2/fotos/foto_01_pagina_14.jpg'],
     transparency: [
       '/content/transparency/arraia-das-cidades/saveclip.app-540630059-17851076157540593-4402759964842436811-n.jpg'
     ],
     objectives: [
-      'Valorizar a cultura popular e as tradições juninas em cinco cidades do DF',
-      'Fortalecer a economia local com microempreendedores e artistas',
-      'Levar programação cultural gratuita para diferentes territórios'
+      'Valorizar cultura junina regional',
+      'Gerar renda para empreendedores locais',
+      'Incentivar circulação cultural entre cidades',
+      'Promover lazer comunitário'
     ],
     results: [
-      'Circuito realizado em 5 cidades do Distrito Federal',
-      'Participação de 35 artistas e mais de 75 microempreendedores',
-      'Milhares de pessoas alcançadas pelo evento'
+      '5 cidades atendidas',
+      '35 artistas participantes',
+      'Mais de 75 empreendedores envolvidos',
+      'Público expressivo em todas as edições'
     ],
     iconName: 'Music',
     color: 'bg-orange-500'
@@ -287,9 +289,9 @@ export const PROJECTS: Project[] = [
     slug: 'feirao-do-trabalhador',
     title: 'Feirão do Trabalhador',
     description:
-      'Evento realizado ao lado da Biblioteca Nacional com 90 empresas, mais de 5 mil vagas e milhares de atendimentos.',
+      'Grande evento voltado à empregabilidade e geração de oportunidades, realizado ao lado da Biblioteca Nacional de Brasília. A ação reuniu empresas, milhares de vagas e atendimentos públicos, conectando trabalhadores ao mercado de trabalho.',
     fullDescription:
-      'O Feirão do Trabalhador foi realizado ao lado da Biblioteca Nacional de Brasília e reuniu 90 empresas, disponibilizou mais de 5 mil vagas de emprego e realizou mais de 9 mil atendimentos, resultando em mais de 5 mil encaminhamentos para processos seletivos. A iniciativa reforça a frente do ICDI voltada a oportunidades, renda e articulação com políticas públicas de empregabilidade. Termo de Fomento n 09/2025, em parceria com a Secretaria de Desenvolvimento Econômico, Trabalho e Renda.',
+      'Grande evento voltado à empregabilidade e geração de oportunidades, realizado ao lado da Biblioteca Nacional de Brasília. A ação reuniu empresas, milhares de vagas e atendimentos públicos, conectando trabalhadores ao mercado de trabalho.',
     image: '/eventos_v2/fotos/foto_01_pagina_15.jpg',
     gallery: [
       '/eventos_v2/fotos/foto_01_pagina_15.jpg',
@@ -299,14 +301,16 @@ export const PROJECTS: Project[] = [
       '/content/transparency/feirao-do-trabalhador/whatsapp-image-2026-04-17-at-09.45.56.jpeg'
     ],
     objectives: [
-      'Conectar trabalhadores a vagas de emprego e processos seletivos',
-      'Ampliar o acesso da população a serviços de empregabilidade',
-      'Articular empresas e poder público em uma grande ação de oportunidades'
+      'Facilitar acesso ao emprego',
+      'Aproximar empresas e candidatos',
+      'Oferecer serviços de apoio ao trabalhador',
+      'Promover geração de renda'
     ],
     results: [
       '90 empresas participantes',
-      'Mais de 5 mil vagas de emprego disponibilizadas',
-      'Mais de 9 mil atendimentos e 5 mil encaminhamentos realizados'
+      'Mais de 5 mil vagas ofertadas',
+      'Mais de 9 mil atendimentos realizados',
+      'Mais de 5 mil encaminhamentos seletivos'
     ],
     iconName: 'Users',
     color: 'bg-green-500'

@@ -5,8 +5,10 @@ import { HeroSection } from '../components/home/HeroSection';
 import { StatsSection } from '../components/home/StatsSection';
 import { ProjectGrid } from '../components/home/ProjectGrid';
 import { AboutSection } from '../components/home/AboutSection';
+import { PilaresSection } from '../components/home/PilaresSection';
 import { TransparencyBanner } from '../components/home/TransparencyBanner';
 import { ContactSection } from '../components/home/ContactSection';
+import { NewsSection } from '../components/home/NewsSection';
 
 export const Home = () => {
   const [projects, setProjects] = React.useState<Project[]>([]);
@@ -48,7 +50,9 @@ export const Home = () => {
       />
       <StatsSection />
       <ProjectGrid projects={projects} />
+      <NewsSection />
       <AboutSection />
+      <PilaresSection />
       <TransparencyBanner />
       <ContactSection />
     </>

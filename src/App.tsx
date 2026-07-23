@@ -7,6 +7,10 @@ import { Projects } from './pages/Projects';
 import { ProjectDetail } from './pages/ProjectDetail';
 import Transparency from './pages/Transparency';
 import { Admin } from './pages/Admin';
+import { Noticias } from './pages/Noticias';
+import { NoticiaDetail } from './pages/NoticiaDetail';
+import { Galeria } from './pages/Galeria';
+import { AreasDeAtuacao } from './pages/AreasDeAtuacao';
 import { WhatsAppWidget } from './components/WhatsAppWidget';
 
 // Helper to handle hash links when navigating from other pages
@@ -41,6 +45,10 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projetos" element={<Projects />} />
             <Route path="/projeto/:slug" element={<ProjectDetail />} />
+            <Route path="/noticias" element={<Noticias />} />
+            <Route path="/noticia/:slug" element={<NoticiaDetail />} />
+            <Route path="/galeria" element={<Galeria />} />
+            <Route path="/areas-de-atuacao" element={<AreasDeAtuacao />} />
             <Route path="/transparencia" element={<Transparency />} />
             <Route path="/admin" element={<Admin />} />
           </Routes>

@@ -8,6 +8,9 @@ import { ProjectContent } from '../components/project/ProjectContent';
 import { ProjectGallery } from '../components/project/ProjectGallery';
 import { ProjectTransparency } from '../components/project/ProjectTransparency';
 import { ProjectCTA } from '../components/project/ProjectCTA';
+import { ProjectVideos } from '../components/project/ProjectVideos';
+import { ProjectPartners } from '../components/project/ProjectPartners';
+import { ProjectDocuments } from '../components/project/ProjectDocuments';
 
 type SelectedMedia = {
   url: string;
@@ -88,6 +91,15 @@ export const ProjectDetail = () => {
       <ProjectHeader project={project} />
       <ProjectContent project={project} />
       <ProjectGallery project={project} onSelectMedia={setSelectedMedia} />
+      {project.videos && project.videos.length > 0 && (
+        <ProjectVideos videos={project.videos} projectTitle={project.title} />
+      )}
+      {project.partners && project.partners.length > 0 && (
+        <ProjectPartners partners={project.partners} />
+      )}
+      {project.documents && project.documents.length > 0 && (
+        <ProjectDocuments documents={project.documents} projectTitle={project.title} />
+      )}
       <ProjectTransparency project={project} onSelectMedia={setSelectedMedia} />
       <ProjectCTA />
     </div>

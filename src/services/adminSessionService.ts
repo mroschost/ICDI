@@ -39,7 +39,7 @@ export const adminSessionService = {
     });
 
     if (!data.ok) {
-      throw new Error(data.error || 'login_failed');
+      throw new Error('error' in data ? data.error : 'login_failed');
     }
 
     return data.admin;
