@@ -17,6 +17,9 @@ pnpm-debug.log*
 # Local runtime / tunnel files
 ngrok_url.txt
 
+# Root-level source content DOCX files (local only)
+content/
+
 # Large source assets kept only locally
 PORTFÓLIO ICDI 2026.pdf
 ICDI_2026_material_extraido_v2/
