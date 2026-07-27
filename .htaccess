@@ -1,0 +1,14 @@
+Options -Indexes
+DirectoryIndex index.php index.html
+
+RewriteEngine On
+
+# Leave real files, assets, and PHP API endpoints alone.
+RewriteRule ^assets/ - [L]
+RewriteRule ^api/ - [L]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Fallback to the pre-rendered front page.
+RewriteRule ^ index.php [L]
