@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-gov-blue-50: #f1f0f8;
+  --color-gov-blue-100: #dedcf0;
+  --color-gov-blue-600: #3b58af;
+  --color-gov-blue-700: #352d83;
+  --color-gov-blue-800: #2f2875;
+  --color-gov-blue-900: #2a2368;
+  
+  --color-gov-yellow: #fbf137;
+  --color-gov-yellow-dark: #e6dc20;
+}
+
+@layer base {
+  html, body {
+    @apply bg-[#f7f7f7] text-[#2A2368] antialiased;
+    font-family: var(--font-sans);
+  }
+
+  .serif {
+    font-family: var(--font-serif);
+    font-style: normal !important;
+  }
+}
+
+@layer components {
+  .gov-card {
+    @apply bg-white border border-[#2A2368]/10 shadow-sm hover:shadow-xl transition-all rounded-none;
+  }
+  
+  .gov-section-stripe {
+    @apply h-1.5 w-full bg-[#DE5121];
+  }
+}
+
+@layer utilities {
+  .rounded-3xl, .rounded-\[2rem\] { border-radius: 0 !important; }
+  .rounded-2xl { border-radius: .25rem !important; }
+}
