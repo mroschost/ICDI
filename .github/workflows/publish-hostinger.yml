@@ -38,7 +38,9 @@ jobs:
         run: npm install --no-audit --no-fund
 
       - name: Build vinext application
-        run: npm run build
+        run: |
+          chmod +x scripts/*.sh
+          npm run build
 
       - name: Export static Hostinger frontend
         run: node scripts/export-hostinger.mjs
