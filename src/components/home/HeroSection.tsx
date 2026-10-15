@@ -19,7 +19,6 @@ const palette = {
 };
 
 const heroImages = [
-  { src: '/idv/hero-slide-woman.png', label: 'Participante do ICDI com camiseta institucional' },
   { src: '/idv/hero-slide-team.png', label: 'Equipe do ICDI com camisetas institucionais' },
   { src: '/idv/hero-slide-woman-phone.png', label: 'Participante do ICDI usando o celular' },
 ];
