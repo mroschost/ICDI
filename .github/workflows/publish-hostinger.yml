@@ -45,7 +45,7 @@ jobs:
       - name: Export static Hostinger frontend
         run: node scripts/export-hostinger.mjs
 
-      - name: Verify build entry points
+      - name: Verify build entry points and updated mobile components
         run: |
           test -s index.php
           test -s projetos/index.php
@@ -53,6 +53,9 @@ jobs:
           test -s admin/index.php
           test -d assets
           grep -q '/assets/' index.php
+          grep -ql 'Explore o ICDI' assets/App-*.js
+          grep -ql 'Menu de navegação' assets/App-*.js
+          grep -q 'top-0 hidden h-20 bg-gradient-to-b' src/components/home/HeroSection.tsx
 
       - name: Commit generated site to master
         run: |
@@ -65,3 +68,24 @@ jobs:
           fi
           git commit -m "build(hostinger): publish compiled site [skip ci]"
           git push origin HEAD:master
+
+      - name: Check live Hostinger publication
+        run: |
+          expected_css="$(grep -oE '/assets/index-[A-Za-z0-9_-]+[.]css' index.php | head -n 1)"
+          if [[ -z "$expected_css" ]]; then
+            echo "Cannot identify expected CSS bundle" >&2
+            exit 1
+          fi
+
+          echo "Waiting for https://icdiinstituto.com.br/ to serve $expected_css"
+          for attempt in $(seq 1 30); do
+            actual="$(curl -fsSL --connect-timeout 8 --max-time 15 -H 'Cache-Control: no-cache' "https://icdiinstituto.com.br/?icdi-build=$GITHUB_SHA" 2>/dev/null || true)"
+            if [[ "$actual" == *"$expected_css"* ]]; then
+              echo "Verified live production HTML references the latest CSS bundle: $expected_css"
+              exit 0
+            fi
+            echo "Live site not updated yet (attempt $attempt/30)"
+            sleep 10
+          done
+          echo "::error::Hostinger did not serve the new compiled HTML within the verification window"
+          exit 1
