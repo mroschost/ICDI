@@ -136,11 +136,11 @@ export const HeroSection = ({ projects, currentProjectIndex, setCurrentProjectIn
               key={currentPersonIndex}
               src={getSafeImageUrl(heroImages[currentPersonIndex].src)}
               alt={heroImages[currentPersonIndex].label}
-              className="absolute inset-0 h-full w-full object-cover object-center"
-              initial={{ opacity: 0, scale: 1.015 }}
-              animate={{ opacity: 1, scale: 1.02 }}
+              className="absolute inset-0 h-full w-full object-contain object-center"
+              initial={{ opacity: 0, scale: 1 }}
+              animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ opacity: { duration: 0.4 }, scale: { duration: 1.5, ease: 'easeOut' } }}
+              transition={{ opacity: { duration: 0.4 } }}
             />
           </AnimatePresence>
 
