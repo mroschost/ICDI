@@ -82,6 +82,19 @@ jobs:
             actual="$(curl -fsSL --connect-timeout 8 --max-time 15 -H 'Cache-Control: no-cache' "https://icdiinstituto.com.br/?icdi-build=$GITHUB_SHA" 2>/dev/null || true)"
             if [[ "$actual" == *"$expected_css"* ]]; then
               echo "Verified live production HTML references the latest CSS bundle: $expected_css"
+
+              # Resolve the exact live React bundle from the entry HTML instead of
+              # trusting the local compiled asset alone.
+              client_file="$(grep -oE '/assets/icdi-client-[A-Za-z0-9_-]+[.]js' index.php | head -n 1)"
+              test -n "$client_file"
+              app_file="$(grep -oE 'App-[A-Za-z0-9_-]+[.]js' ".${client_file}" | head -n 1)"
+              test -n "$app_file"
+              live_app="$(curl -fsSL --retry 3 --max-time 45 -H 'Cache-Control: no-cache' "https://icdiinstituto.com.br/assets/$app_file")"
+              if [[ "$live_app" != *"Explore o ICDI"* ]] || [[ "$live_app" != *"Menu de navegação"* ]]; then
+                echo "::error::Live JavaScript bundle is missing the mobile menu update: $app_file"
+                exit 1
+              fi
+              echo "Verified live JavaScript includes the updated mobile menu: $app_file"
               exit 0
             fi
             echo "Live site not updated yet (attempt $attempt/30)"
