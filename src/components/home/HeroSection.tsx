@@ -18,11 +18,10 @@ const palette = {
   orange: '#DE5121',
 };
 
-const heroPeople = [
-  { label: 'Homem jovem participante de iniciativa do ICDI', position: '0% 0%' },
-  { label: 'Mulher jovem participante de iniciativa do ICDI', position: '100% 0%' },
-  { label: 'Garota participante de iniciativa do ICDI', position: '0% 100%' },
-  { label: 'Garoto participante de iniciativa do ICDI', position: '100% 100%' },
+const heroImages = [
+  { src: '/idv/hero-slide-woman.png', label: 'Participante do ICDI com camiseta institucional' },
+  { src: '/idv/hero-slide-team.png', label: 'Equipe do ICDI com camisetas institucionais' },
+  { src: '/idv/hero-slide-woman-phone.png', label: 'Participante do ICDI usando o celular' },
 ];
 
 export const HeroSection = ({ projects, currentProjectIndex, setCurrentProjectIndex }: HeroSectionProps) => {
@@ -31,8 +30,8 @@ export const HeroSection = ({ projects, currentProjectIndex, setCurrentProjectIn
 
   useEffect(() => {
     const interval = window.setInterval(() => {
-      setCurrentPersonIndex((index) => (index + 1) % heroPeople.length);
-    }, 1500);
+      setCurrentPersonIndex((index) => (index + 1) % heroImages.length);
+    }, 2500);
 
     return () => window.clearInterval(interval);
   }, []);
@@ -133,21 +132,15 @@ export const HeroSection = ({ projects, currentProjectIndex, setCurrentProjectIn
           className="relative h-[430px] w-full overflow-hidden sm:h-[520px] lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-[54%]"
         >
           <AnimatePresence mode="sync" initial={false}>
-            <motion.div
+            <motion.img
               key={currentPersonIndex}
-              role="img"
-              aria-label={heroPeople[currentPersonIndex].label}
-              className="absolute inset-0 lg:-top-[54px] lg:bottom-auto lg:left-auto lg:right-0 lg:h-[calc(100%+54px)] lg:w-[178%]"
-              style={{
-                backgroundImage: `url(${getSafeImageUrl('/idv/hero-people-grid.png')})`,
-                backgroundPosition: heroPeople[currentPersonIndex].position,
-                backgroundSize: '200% 200%',
-                backgroundRepeat: 'no-repeat',
-              }}
+              src={getSafeImageUrl(heroImages[currentPersonIndex].src)}
+              alt={heroImages[currentPersonIndex].label}
+              className="absolute inset-0 h-full w-full object-cover object-center"
               initial={{ opacity: 0, scale: 1.015 }}
-              animate={{ opacity: 1, scale: [1.015, 1.035, 1.015] }}
+              animate={{ opacity: 1, scale: 1.02 }}
               exit={{ opacity: 0 }}
-              transition={{ opacity: { duration: 0.45 }, scale: { duration: 12, repeat: Infinity, ease: 'easeInOut' } }}
+              transition={{ opacity: { duration: 0.4 }, scale: { duration: 1.5, ease: 'easeOut' } }}
             />
           </AnimatePresence>
 
