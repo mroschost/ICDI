@@ -1,0 +1,69 @@
+name: Publish ICDI Hostinger build
+
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - 'index.php'
+      - 'assets/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: icdi-hostinger-production
+  cancel-in-progress: true
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          persist-credentials: true
+          fetch-depth: 1
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Generate lockfile when absent
+        run: |
+          if [ ! -f package-lock.json ]; then
+            npm install --package-lock-only --no-audit --no-fund
+          fi
+
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Build vinext application
+        run: npm run build
+
+      - name: Export static Hostinger frontend
+        run: node scripts/export-hostinger.mjs
+
+      - name: Verify build entry points
+        run: |
+          test -s index.php
+          test -s projetos/index.php
+          test -s transparencia/index.php
+          test -s admin/index.php
+          test -d assets
+          grep -q '/assets/' index.php
+
+      - name: Commit generated site to master
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.php projetos/index.php transparencia/index.php admin/index.php assets
+          if git diff --cached --quiet; then
+            echo "No published asset changes"
+            exit 0
+          fi
+          git commit -m "build(hostinger): publish compiled site [skip ci]"
+          git push origin HEAD:master
