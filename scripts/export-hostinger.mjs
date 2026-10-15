@@ -14,9 +14,9 @@ if (typeof worker?.fetch !== 'function') {
 
 const destinations = [
   ['/', 'index.php'],
-  ['/projetos/', 'projetos/index.php'],
-  ['/transparencia/', 'transparencia/index.php'],
-  ['/admin/', 'admin/index.php'],
+  ['/projetos', 'projetos/index.php'],
+  ['/transparencia', 'transparencia/index.php'],
+  ['/admin', 'admin/index.php'],
 ];
 
 const context = {
