@@ -32,14 +32,10 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Generate lockfile when absent
-        run: |
-          if [ ! -f package-lock.json ]; then
-            npm install --package-lock-only --no-audit --no-fund
-          fi
-
-      - name: Install build dependencies
-        run: npm ci --no-audit --no-fund
+      - name: Install and resolve build dependencies
+        # The master branch currently has no package-lock.json. npm install
+        # creates a consistent lockfile before the existing build validator runs.
+        run: npm install --no-audit --no-fund
 
       - name: Build vinext application
         run: npm run build
