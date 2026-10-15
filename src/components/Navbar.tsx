@@ -110,7 +110,7 @@ export const Navbar = () => {
           <img
             src={getSafeImageUrl('/brand/icdi-logo.png')}
             alt="ICDI"
-            className="h-11 w-auto max-w-[180px] object-contain md:h-14"
+            className="h-14 w-auto max-w-[190px] object-contain"
           />
         </Link>
 
