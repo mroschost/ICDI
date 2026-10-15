@@ -151,7 +151,7 @@ export const HeroSection = ({ projects, currentProjectIndex, setCurrentProjectIn
             />
           </AnimatePresence>
 
-          <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#f7f7f7] to-transparent lg:inset-y-0 lg:left-0 lg:right-auto lg:h-auto lg:w-24 lg:bg-gradient-to-r" />
+          <div className="absolute inset-x-0 top-0 hidden h-20 bg-gradient-to-b from-[#f7f7f7] to-transparent lg:inset-y-0 lg:left-0 lg:right-auto lg:h-auto lg:w-24 lg:block lg:bg-gradient-to-r" />
 
           <motion.div
             aria-hidden="true"
