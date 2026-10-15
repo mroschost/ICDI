@@ -1,6 +1,6 @@
 import type React from 'react';
 import logo from '../assets/brand/icdi-logo.png';
-import heroInstitutional from '../assets/idv/hero-institutional.jpg';
+import heroPeopleGrid from '../assets/idv/hero-people-grid.png';
 import p0105 from '../assets/eventos_v2/fotos/foto_01_pagina_05.jpg';
 import p0106 from '../assets/eventos_v2/fotos/foto_01_pagina_06.jpg';
 import p0107 from '../assets/eventos_v2/fotos/foto_01_pagina_07.jpg';
@@ -40,7 +40,7 @@ export const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1594322436404-5
 const LOCAL_ASSETS_RAW = {
   'logo.png': logo,
   'brand/icdi-logo.png': logo,
-  'idv/hero-institutional.jpg': heroInstitutional,
+  'idv/hero-people-grid.png': heroPeopleGrid,
   'eventos_v2/fotos/foto_01_pagina_05.jpg': p0105,
   'eventos_v2/fotos/foto_01_pagina_06.jpg': p0106,
   'eventos_v2/fotos/foto_01_pagina_07.jpg': p0107,

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -18,8 +18,24 @@ const palette = {
   orange: '#DE5121',
 };
 
+const heroPeople = [
+  { label: 'Homem jovem participante de iniciativa do ICDI', position: '0% 0%' },
+  { label: 'Mulher jovem participante de iniciativa do ICDI', position: '100% 0%' },
+  { label: 'Garota participante de iniciativa do ICDI', position: '0% 100%' },
+  { label: 'Garoto participante de iniciativa do ICDI', position: '100% 100%' },
+];
+
 export const HeroSection = ({ projects, currentProjectIndex, setCurrentProjectIndex }: HeroSectionProps) => {
   const activeProject = projects[currentProjectIndex];
+  const [currentPersonIndex, setCurrentPersonIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setCurrentPersonIndex((index) => (index + 1) % heroPeople.length);
+    }, 1500);
+
+    return () => window.clearInterval(interval);
+  }, []);
 
   const changeProject = (direction: number) => {
     setCurrentProjectIndex((currentProjectIndex + direction + projects.length) % projects.length);
@@ -116,13 +132,24 @@ export const HeroSection = ({ projects, currentProjectIndex, setCurrentProjectIn
           transition={{ duration: 0.85, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
           className="relative h-[430px] w-full overflow-hidden sm:h-[520px] lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-[54%]"
         >
-          <motion.img
-            src={getSafeImageUrl('/idv/hero-institutional.jpg')}
-            alt="Mulher participante de iniciativa do ICDI"
-            className="absolute inset-0 h-full w-full object-cover object-right sm:object-[68%_center] lg:-top-[54px] lg:bottom-auto lg:left-auto lg:right-0 lg:h-[calc(100%+54px)] lg:w-[178%] lg:max-w-none lg:object-right"
-            animate={{ scale: [1.01, 1.035, 1.01] }}
-            transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
-          />
+          <AnimatePresence mode="sync" initial={false}>
+            <motion.div
+              key={currentPersonIndex}
+              role="img"
+              aria-label={heroPeople[currentPersonIndex].label}
+              className="absolute inset-0 lg:-top-[54px] lg:bottom-auto lg:left-auto lg:right-0 lg:h-[calc(100%+54px)] lg:w-[178%]"
+              style={{
+                backgroundImage: `url(${getSafeImageUrl('/idv/hero-people-grid.png')})`,
+                backgroundPosition: heroPeople[currentPersonIndex].position,
+                backgroundSize: '200% 200%',
+                backgroundRepeat: 'no-repeat',
+              }}
+              initial={{ opacity: 0, scale: 1.015 }}
+              animate={{ opacity: 1, scale: [1.015, 1.035, 1.015] }}
+              exit={{ opacity: 0 }}
+              transition={{ opacity: { duration: 0.45 }, scale: { duration: 12, repeat: Infinity, ease: 'easeInOut' } }}
+            />
+          </AnimatePresence>
 
           <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#f7f7f7] to-transparent lg:inset-y-0 lg:left-0 lg:right-auto lg:h-auto lg:w-24 lg:bg-gradient-to-r" />
 
